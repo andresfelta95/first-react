@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
 
+const movies = [
+  {
+    name: "Avengers",
+    available: 50,
+  },
+  {
+    name: "Minions",
+    available: 50,
+  }
+];
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Movies</h1>        
       </header>
+
+      {movies.map(movie => (
+        <h3>{movie.name}</h3>
+      ))}
     </div>
   );
 }
